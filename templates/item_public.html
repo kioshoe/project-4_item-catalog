@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header_public.html" %}
+  <div class="row divider">
+    <div class="col-md-12"></div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-11 padding-none">
+      <h1>{{ item.name }}</h1>
+        <div class="item description">
+          <p>{{ item.description }}</p>
+        </div>
+    </div>
+  </div>
+{% endblock %}

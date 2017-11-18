@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header_public.html" %}
+  <div class="row divider">
+    <div class="col-md-12"></div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-11 col-md-offset-1 padding-none">
+      <h1>Categories</h1>
+    </div>
+  </div>  
+
+  {% for i in categories %}
+    <a href = '{{url_for('showCategory', category_name = i.name)}}'>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 category-list">
+          <h3>{{i.name}}</h3>
+        </div>
+      </div>
+    </a>
+  {% endfor %}
+{% endblock %}
